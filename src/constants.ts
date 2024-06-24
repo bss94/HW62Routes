@@ -1,4 +1,4 @@
-import {POST} from './types';
+import {CONTACT, POST} from './types';
 
 export const OURPOSTS: POST[] = [
   {
@@ -29,4 +29,35 @@ export const OURPOSTS: POST[] = [
     body: 'Сегодня начаты работы над изготовлением нового ИТП для бизнес-центра Виктори, ждите новостей с работой на данном объекте в ближайшее время',
     id: 'doc-4',
   },
+];
+
+export const OURCONTACTS: CONTACT[] = [
+  {
+    firstName: 'Иванов',
+    secondName: 'Иван',
+    position: 'Директор',
+    email: 'director@basiko.kg',
+    phone: '+996-89-**-**',
+  },
+  {
+    firstName: 'Сидоров',
+    secondName: 'Сидор',
+    position: 'Отдел продаж',
+    email: 'saller@basiko.kg',
+    phone: '+996-89-**-**',
+  },
+  {
+    firstName: 'Аман у.',
+    secondName: 'Аман',
+    position: 'Поддержка',
+    email: 'helper@basiko.kg',
+    phone: '+996-89-**-**',
+  },
+  {
+    firstName: 'Abrams',
+    secondName: 'James',
+    position: 'Консультант',
+    email: 'consultation@basiko.kg',
+    phone: '+996-89-**-**',
+  }
 ];
