@@ -1,4 +1,4 @@
-import {CONTACT, POST} from './types';
+import {CONTACT, POST, PRODUCT} from './types';
 
 export const OURPOSTS: POST[] = [
   {
@@ -60,4 +60,31 @@ export const OURCONTACTS: CONTACT[] = [
     email: 'consultation@basiko.kg',
     phone: '+996-89-**-**',
   }
+];
+
+export const OURPRODUCTS: PRODUCT[] = [
+  {
+    name: 'ИТП коммерческий',
+    price: '150000 сом',
+    properties: 'Диаметр 40',
+    id: 'ITPComm40'
+  },
+  {
+    name: 'ИТП коммерческий',
+    price: '250000 сом',
+    properties: 'Диаметр 50',
+    id: 'ITPComm50'
+  },
+  {
+    name: 'ИТП жилой',
+    price: '750000 сом',
+    properties: 'Диаметр 80',
+    id: 'ITPLiv80'
+  },
+  {
+    name: 'ИТП жилой',
+    price: '950000 сом',
+    properties: 'Диаметр 100',
+    id: 'ITPLiv100'
+  },
 ];

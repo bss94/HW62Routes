@@ -8,6 +8,7 @@ import {POST} from './types';
 import FullPost from './components/Posts/FullPost/FullPost';
 import AboutUs from './containers/AboutUs/AboutUs';
 import Contacts from './containers/Contacts/Contacts';
+import Products from './containers/Products/Products';
 
 const App = () => {
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
@@ -16,7 +17,6 @@ const App = () => {
   const addPost = (post: POST) => {
     setAllPosts(prevState => [...prevState, post]);
   };
-
 
   return (
     <>
@@ -38,7 +38,7 @@ const App = () => {
           })}
           <Route path="/products"
                  element={
-                   <div/>
+                   <Products/>
                  }/>
           <Route path="/about-us"
                  element={

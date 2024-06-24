@@ -13,3 +13,10 @@ export interface CONTACT {
   email: string;
   phone: string;
 }
+
+export interface PRODUCT {
+  name: string;
+  price: string;
+  id: string;
+  properties: string;
+}
