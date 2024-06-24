@@ -18,14 +18,14 @@ const Toolbar:React.FC<Props> = ({
     <Navbar bg="primary" data-bs-theme="dark">
       <Container>
         <NavLink className="navbar-brand" to="/">
-         Lllogo
+         Б.А.С.и Ко
         </NavLink>
 
         <Nav className="me-auto">
-          <NavLink className='nav-link' to="/">Home</NavLink>
-          <NavLink className='nav-link' to="/products">Products</NavLink>
-          <NavLink className='nav-link' to="/about-us">About us</NavLink>
-          <NavLink className='nav-link' to="/contacts">Contacts</NavLink>
+          <NavLink className='nav-link' to="/">Главная</NavLink>
+          <NavLink className='nav-link' to="/products">Продукты</NavLink>
+          <NavLink className='nav-link' to="/about-us">О нас</NavLink>
+          <NavLink className='nav-link' to="/contacts">Контакты</NavLink>
         </Nav>
         <Nav>
           <Button variant="success" onClick={getAdmin}>Now {btnText}</Button>

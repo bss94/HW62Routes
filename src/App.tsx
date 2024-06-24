@@ -3,13 +3,16 @@ import {Route, Routes} from 'react-router-dom';
 import Home from './containers/Home/Home';
 import Toolbar from './components/Toolbar/Toolbar';
 import {useState} from 'react';
+import {OURPOSTS} from './constants';
+import {POST} from './types';
 
 const App = () => {
   const [isAdmin,setIsAdmin] = useState<boolean>(false)
+  const [allPosts,setAllPosts] = useState<POST[]>(OURPOSTS)
 
   return (
     <>
-      <>
+
 
         <header>
           <Toolbar isAdmin={isAdmin} getAdmin={()=>setIsAdmin(!isAdmin)}/>
@@ -18,7 +21,7 @@ const App = () => {
           <Routes>
             <Route path="/"
                    element={
-                     <Home isAdmin={isAdmin}/>
+                     <Home posts={allPosts} isAdmin={isAdmin}/>
                    }/>
             <Route path="/products"
                    element={
@@ -39,7 +42,7 @@ const App = () => {
           </Routes>
         </Container>
 
-      </>
+
 
     </>
   );
