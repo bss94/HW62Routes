@@ -1,8 +1,11 @@
-import {Col, Row} from 'react-bootstrap';
+import {Button, Col, Row} from 'react-bootstrap';
 import {OURCONTACTS} from '../../constants';
 import Contact from '../../components/Contact/Contact';
+import {NavLink, Outlet} from 'react-router-dom';
 
-const Contacts = () => {
+
+
+const Contacts= () => {
   return (
     <Row>
       <Col/>
@@ -14,6 +17,9 @@ const Contacts = () => {
                             email={el.email} key={Math.random() * 1000}/>;
           })}
         </div>
+        <NavLink className="nav-link text-center mt-4" to="new-order"><Button>Оставить заявку</Button></NavLink>
+
+        <Outlet/>
       </Col>
       <Col/>
 

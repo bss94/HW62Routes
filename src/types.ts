@@ -20,3 +20,10 @@ export interface PRODUCT {
   id: string;
   properties: string;
 }
+export interface ORDER{
+  name:string;
+  phone:string;
+  email:string;
+  id:string;
+  order:string;
+}

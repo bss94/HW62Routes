@@ -1,4 +1,4 @@
-import {CONTACT, POST, PRODUCT} from './types';
+import {CONTACT, ORDER, POST, PRODUCT} from './types';
 
 export const OURPOSTS: POST[] = [
   {
@@ -87,4 +87,21 @@ export const OURPRODUCTS: PRODUCT[] = [
     properties: 'Диаметр 100',
     id: 'ITPLiv100'
   },
+];
+export const CURRENTORDERS: ORDER[] = [
+  {
+    name: 'Бражников С',
+    phone: '+996-556-99-**-**',
+    email: 'client@gmail.com',
+    id: 'order-1',
+    order: 'заявка на ИТП для жилого дома 13 этажей + паркинг',
+  },
+  {
+    name: 'Кто-то какой-то',
+    phone: '+996-556-99-**-**',
+    email: 'client2@gmail.com',
+    id: 'order-2',
+    order: 'заявка на ИТП для жилого дома 15 этажей + 2х уровневый паркинг',
+  },
+
 ];

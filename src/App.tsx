@@ -3,16 +3,22 @@ import {Route, Routes} from 'react-router-dom';
 import Home from './containers/Home/Home';
 import Toolbar from './components/Toolbar/Toolbar';
 import {useState} from 'react';
-import {OURPOSTS} from './constants';
-import {POST} from './types';
+import {CURRENTORDERS, OURPOSTS} from './constants';
+import {ORDER, POST} from './types';
 import FullPost from './components/Posts/FullPost/FullPost';
 import AboutUs from './containers/AboutUs/AboutUs';
 import Contacts from './containers/Contacts/Contacts';
 import Products from './containers/Products/Products';
+import Order from './components/Order/Order';
+import AllOrders from './containers/AllOrders/AllOrders';
 
 const App = () => {
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
   const [allPosts, setAllPosts] = useState<POST[]>(OURPOSTS);
+  const [orders,setOrders]=useState<ORDER[]>(CURRENTORDERS);
+  const onOrderSubmit = (order:ORDER)=>{
+    setOrders(prevState => [...prevState,order])
+  }
 
   const addPost = (post: POST) => {
     setAllPosts(prevState => [...prevState, post]);
@@ -44,10 +50,16 @@ const App = () => {
                  element={
                    <AboutUs/>
                  }/>
+          <Route path="/orders"
+                 element={
+                   <AllOrders orders={orders}/>
+                 }/>
           <Route path="/contacts"
                  element={
                    <Contacts/>
-                 }/>
+                 }>
+            <Route path='new-order' element={<Order onOrderSubmit={onOrderSubmit}/>}/>
+          </Route>
 
           <Route path="*"
                  element={

@@ -12,9 +12,18 @@ const Toolbar: React.FC<Props> = ({
   getAdmin
 }) => {
   let btnText = 'User';
+  let orders=(
+    <></>
+  )
   if (isAdmin) {
     btnText = 'Admin';
+    orders=(
+      <NavLink className="nav-link" to='/orders'>Заявки</NavLink>
+    )
   }
+
+
+
   return (
     <Navbar bg="primary" data-bs-theme="dark">
       <Container>
@@ -29,6 +38,7 @@ const Toolbar: React.FC<Props> = ({
           <NavLink className="nav-link" to="/contacts">Контакты</NavLink>
         </Nav>
         <Nav>
+          {orders}
           <Button variant="success" onClick={getAdmin}>Now {btnText}</Button>
         </Nav>
       </Container>
