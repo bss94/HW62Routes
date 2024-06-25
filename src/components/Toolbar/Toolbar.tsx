@@ -12,17 +12,15 @@ const Toolbar: React.FC<Props> = ({
   getAdmin
 }) => {
   let btnText = 'User';
-  let orders=(
+  let orders = (
     <></>
-  )
+  );
   if (isAdmin) {
     btnText = 'Admin';
-    orders=(
-      <NavLink className="nav-link" to='/orders'>Заявки</NavLink>
-    )
+    orders = (
+      <NavLink className="nav-link" to="/orders">Заявки</NavLink>
+    );
   }
-
-
 
   return (
     <Navbar bg="primary" data-bs-theme="dark">
@@ -40,6 +38,7 @@ const Toolbar: React.FC<Props> = ({
         <Nav>
           {orders}
           <Button variant="success" onClick={getAdmin}>Now {btnText}</Button>
+          <NavLink className="nav-link" to="/portfolio">Портфолио</NavLink>
         </Nav>
       </Container>
     </Navbar>

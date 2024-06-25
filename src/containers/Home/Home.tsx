@@ -13,7 +13,6 @@ interface Props {
 const Home: React.FC<Props> = ({isAdmin, posts, addPost}) => {
   const [show, setShow] = useState<boolean>(false);
 
-
   let createBtn = (<></>);
   if (isAdmin) {
     createBtn = (

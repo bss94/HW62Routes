@@ -11,10 +11,10 @@ const initialState = {
 };
 
 interface Props {
-  onOrderSubmit:(order:ORDER)=>void
+  onOrderSubmit: (order: ORDER) => void;
 }
 
-const Order:React.FC<Props> = ({
+const Order: React.FC<Props> = ({
   onOrderSubmit
 }) => {
   const [newOrder, setNewOrder] = useState<ORDER>(initialState);
@@ -36,16 +36,15 @@ const Order:React.FC<Props> = ({
 
     onCancel();
   };
-  const onCancel=()=>{
-    setNewOrder(initialState)
-  }
-
+  const onCancel = () => {
+    setNewOrder(initialState);
+  };
 
   return (
     <Row>
       <Col/>
       <Col sm={10}>
-        <Form onSubmit={onFormSubmit} className='mb-2'>
+        <Form onSubmit={onFormSubmit} className="mb-2">
           <Form.Group className="mb-3"
                       controlId="name"
           >

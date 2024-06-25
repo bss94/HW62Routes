@@ -3,9 +3,7 @@ import {OURCONTACTS} from '../../constants';
 import Contact from '../../components/Contact/Contact';
 import {NavLink, Outlet} from 'react-router-dom';
 
-
-
-const Contacts= () => {
+const Contacts = () => {
   return (
     <Row>
       <Col/>

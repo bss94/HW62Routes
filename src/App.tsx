@@ -11,14 +11,18 @@ import Contacts from './containers/Contacts/Contacts';
 import Products from './containers/Products/Products';
 import Order from './components/Order/Order';
 import AllOrders from './containers/AllOrders/AllOrders';
+import Portfolio from './containers/Portfolio/Portfolio';
+import HwMovie from './containers/HWMovie/HWMovie';
+import Saper from './components/HWSaper/Saper';
+import RandBall from './components/HWRandBall/RandBall';
 
 const App = () => {
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
   const [allPosts, setAllPosts] = useState<POST[]>(OURPOSTS);
-  const [orders,setOrders]=useState<ORDER[]>(CURRENTORDERS);
-  const onOrderSubmit = (order:ORDER)=>{
-    setOrders(prevState => [...prevState,order])
-  }
+  const [orders, setOrders] = useState<ORDER[]>(CURRENTORDERS);
+  const onOrderSubmit = (order: ORDER) => {
+    setOrders(prevState => [...prevState, order]);
+  };
 
   const addPost = (post: POST) => {
     setAllPosts(prevState => [...prevState, post]);
@@ -58,7 +62,16 @@ const App = () => {
                  element={
                    <Contacts/>
                  }>
-            <Route path='new-order' element={<Order onOrderSubmit={onOrderSubmit}/>}/>
+            <Route path="new-order" element={<Order onOrderSubmit={onOrderSubmit}/>}/>
+          </Route>
+
+          <Route path="/portfolio"
+                 element={
+                   <Portfolio/>
+                 }>
+            <Route path="movie-joke" element={<HwMovie/>}/>
+            <Route path="saper" element={<Saper/>}/>
+            <Route path="rand-ball" element={<RandBall/>}/>
           </Route>
 
           <Route path="*"

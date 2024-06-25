@@ -1,0 +1,14 @@
+
+
+.num-ball {
+  min-width: 900px;
+  margin: 50px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.num-btn {
+  background-color: rgba(6, 110, 253, 0.79);
+  color: white;
+}
